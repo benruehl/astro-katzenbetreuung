@@ -1,0 +1,66 @@
+---
+import '@fontsource-variable/comfortaa';
+import '@fontsource-variable/noto-sans';
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Annas Katzenbetreuung</title>
+	</head>
+	<body>
+		<slot/>
+	</body>
+</html>
+
+<style is:global>
+    :root {
+		--color-text: 69, 52, 47;
+		--color-text-soft: 92, 72, 66;
+		--content-max-width: 1280px;
+    }
+
+	html {
+  		font-family: 'Noto Sans Variable', sans-serif;
+		color: rgb(var(--color-text));
+		scroll-behavior: smooth;
+		font-size: 18px;
+		line-height: 1.5;
+
+		@media (max-width: $sm) {
+			font-size: 16px;
+		}
+	}
+
+	html,
+	body {
+		max-width: 100%;
+		overflow-x: hidden;
+        margin: 0;
+	}
+
+	main {
+		display: flex;
+		flex-direction: column;
+		gap: 4rem;
+	}
+
+    section {
+        margin: auto;
+        width: var(--content-max-width);
+        max-width: calc(100% - 2rem);
+    }
+	
+	h1 {
+		font-family: 'Comfortaa Variable', system-ui;
+		font-size: min(4rem, 10vw);
+		font-weight: 400;
+		line-height: 1.1;
+		letter-spacing: -0.05em;
+		margin-bottom: 1em;
+		color: #a5606f;
+	}
+</style>

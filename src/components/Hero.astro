@@ -1,0 +1,58 @@
+<div class="background">
+    <section>
+        <h1>Annas<br/>Katzenbetreuung</h1>
+        <p class="subtitle">Mobiles Katzensitting in Berlin</p>
+        <p>
+            Ich bin Gaby Annas. Ich betreue Katzen direkt bei Ihnen zu Hause.
+            Gern lerne ich Sie und Ihr/e Kätzchen 
+            vorab kostenlos und unverbindlich kennen.
+        </p>
+    </section>
+    <video width="1280" height="720" autoplay muted loop>
+        <source src="cat-background-2.webm" type="video/webm">
+        <source src="cat-background-2.mp4" type="video/mp4">
+    </video>
+</div>
+
+<style>
+    .background {
+        background: linear-gradient(
+            to right,
+            #F4F3F0,
+            #F7F5F5 max(150px, 25%),
+            #F3F2F3 max(300px, 50%),
+            #F1EFF1 max(450px, 75%),
+            #EAEDEF
+        );
+    }
+
+    section {
+        margin-top: 4rem;
+    }
+
+	video {
+        display: block;
+		width: 100%;
+		height: auto;
+        min-width: 600px;
+        margin-top: -50px;
+	}
+
+    h1 {
+		background: linear-gradient(to bottom right, #cea15d, #a5606f);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+    }
+
+    p {
+        max-width: 500px;
+		background: linear-gradient(to right, rgb(var(--color-text-soft)), rgb(var(--color-text)));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+        transform: translateZ(0);
+    }
+</style>
