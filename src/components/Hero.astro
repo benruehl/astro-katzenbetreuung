@@ -14,8 +14,10 @@
     </video>
 </div>
 
-<style>
+<style lang="scss">
     .background {
+        border-radius: 0 0 30px 30px;
+        overflow: hidden;
         background: linear-gradient(
             to right,
             #F4F3F0,
@@ -24,6 +26,8 @@
             #F1EFF1 max(450px, 75%),
             #EAEDEF
         );
+        animation: 2s ease-out 0s 1 open;
+        transform-origin: 50% 0;
     }
 
     section {
@@ -35,7 +39,9 @@
 		width: 100%;
 		height: auto;
         min-width: 600px;
+        max-width: var(--content-max-width);
         margin-top: -50px;
+        margin: auto;
 	}
 
     h1 {
@@ -54,5 +60,21 @@
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
         transform: translateZ(0);
+    }
+
+    @keyframes open {
+        0% {
+            clip-path: inset(0 100% round 30px);
+            transform: scale(0.9);
+            opacity: 0;
+        }
+        40% {
+            clip-path: inset(0 0% round 30px);
+            transform: scale(1.025);
+            opacity: 1;
+        }
+        100% {
+            transform: scale(1);
+        }
     }
 </style>
