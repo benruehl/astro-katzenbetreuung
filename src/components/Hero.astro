@@ -13,6 +13,7 @@
         <source src="cat-background-2.mp4" type="video/mp4">
     </video>
 </div>
+<a href="#kontakt" type="button">Kontakt</a>
 
 <style lang="scss">
     .background {
@@ -45,7 +46,11 @@
 	}
 
     h1 {
-		background: linear-gradient(to bottom right, #cea15d, #a5606f);
+		background: linear-gradient(
+            to bottom right,
+            rgb(var(--color-tertiary)),
+            rgb(var(--color-secondary))
+        );
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
     }
@@ -60,6 +65,37 @@
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
         transform: translateZ(0);
+    }
+
+    a[type="button"] {
+        display: block;
+        width: max-content;
+        margin: auto;
+        margin-top: -20px;
+        padding: .5em 2em;
+        color: white;
+		background: radial-gradient(
+            at 20% 0%,
+            rgba(var(--color-secondary), 1),
+            rgba(var(--color-primary), 1)
+        );
+        border-radius: 100px;
+        box-shadow: -6px -6px 14px rgba(255, 255, 255, .7),
+                    -6px -6px 10px rgba(255, 255, 255, .5),
+                    6px 6px 8px rgba(255, 255, 255, .075),
+                    6px 6px 10px rgba(0, 0, 0, .15);
+        text-decoration: none;
+        font-size: 1.3rem;
+        transform-style: preserve-3d;
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: -8px;
+            background: white;
+            border-radius: inherit;
+            transform: translateZ(-1px);
+        }
     }
 
     @keyframes open {
