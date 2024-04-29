@@ -1,0 +1,45 @@
+---
+import { Image } from "astro:assets";
+import profileImage from "../images/profile-pic.jpg";
+---
+
+<section>
+    <h2 class="visually-hidden">Über mich</h2>
+    <figure>
+        <Image src={profileImage} alt="Gaby Annas (Ich)" width={160} height={160}/>
+    </figure>
+    <p>
+        Ich heiße Gaby Annas, wurde 1965 in Berlin geboren und habe eine
+        erwachsene Tochter. Schon als Kind war ich sehr tierlieb.1991 kam die
+        erste Katze über Nacht in mein Leben, Mautzi. Bekannte standen mit ihm
+        auf dem Arm vor unserer Tür. So wurde ich mehr oder weniger freiwillig
+        Katzenhalterin. Mautzi schlich sich sofort in mein Herz und lebte bei
+        mir bis er 2006 starb. 2008 zog Heinzi bei uns ein. Er starb allerding
+        mit zwei Jahren viel zu früh an FIP.
+    </p>
+</section>
+
+<style lang="scss">
+    figure {
+        width: 160px;
+        height: 160px;
+        border-radius: 1000px;
+        overflow: hidden;
+        margin: 0;
+        position: relative;
+
+        img {
+            object-fit: cover;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background: radial-gradient(circle at 50% 40%, transparent, rgb(var(--color-primary)));
+            opacity: .75;
+            mix-blend-mode: color;
+        }
+    }
+</style>
