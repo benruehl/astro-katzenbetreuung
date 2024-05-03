@@ -17,18 +17,14 @@
 
 <style lang="scss">
     .background {
-        border-radius: 0 0 30px 30px;
         overflow: hidden;
-        background: linear-gradient(
-            to right,
-            #F4F3F0,
-            #F7F5F5 max(150px, 25%),
-            #F3F2F3 max(300px, 50%),
-            #F1EFF1 max(450px, 75%),
-            #EAEDEF
+        background: radial-gradient(
+            circle at 100% -10%,
+            #d68571, #e2ac8d, #edd2b3, #fdf5e2, #eaedef
         );
-        animation: 2s ease-out 0s 1 open;
+        animation: 1.5s ease-out 0s 1 open;
         transform-origin: 50% 0;
+            clip-path: inset(0 0% round 0 0 30px 30px);
     }
 
     section {
@@ -42,6 +38,8 @@
         min-width: 600px;
         max-width: var(--content-max-width);
         margin: -50px auto 0 auto;
+        mix-blend-mode: multiply;
+        mask-image: linear-gradient(to top, black 70%, transparent);
 	}
 
     h1 {
@@ -60,9 +58,6 @@
 
     p {
         max-width: 500px;
-		background: linear-gradient(to right, rgb(var(--color-text-soft)), rgb(var(--color-text)));
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
         transform: translateZ(0);
     }
 
@@ -75,8 +70,8 @@
         color: white;
 		background: radial-gradient(
             at 20% 0%,
-            rgba(var(--color-secondary), 1),
-            rgba(var(--color-primary), 1)
+            rgb(var(--color-primary)),
+            rgb(var(--color-secondary))
         );
         border-radius: 100px;
         box-shadow: -6px -6px 14px rgba(255, 255, 255, .7),
@@ -103,7 +98,7 @@
             transform: scale(0.9);
             opacity: 0;
         }
-        40% {
+        60% {
             clip-path: inset(0 0% round 30px);
             transform: scale(1.025);
             opacity: 1;
