@@ -1,0 +1,65 @@
+---
+import { Image } from "astro:assets";
+import catImage from "../images/cat-diva.png";
+---
+
+<section>
+    <h2>Vorteile</h2>
+    <h3>Flexible Betreuung</h3>
+    <p>
+        Egal, ob Sie nur einen Wochenendtrip oder eine längere Reise
+        unternehmen wollen, zur Kur fahren oder ins Krankenhaus müssen.
+        Gern besuche ich Ihre Katzen und versorge sie umfangreich je nach
+        persönlicher Abstimmung.
+    </p>
+    <h3>Katzensitting ist Vertrauenssache</h3>
+    <p>
+        Katzen lieben ihre gewohnte Umgebung, sie mögen keine Veränderungen.
+        Eine Unterbringung in einer Tierpension bzw. bei Freunden kann
+        unnötigen Stress für das Tier bedeuten.
+        Gern lerne ich Sie und Ihr/e Kätzchen vorab kostenlos und unverbindlich
+        kennen.
+    </p>
+</section>
+<figure>
+    <Image src={catImage} alt="Katze Diva"/>
+    <figcaption>
+        Diva, 2019
+    </figcaption>
+</figure>
+
+<style lang="scss">
+    figure {
+        max-width: 700px;
+        margin-right: 1rem;
+        position: relative;
+        perspective: 1000px;
+
+        img {
+            max-width: 100%;
+            object-fit: cover;
+            object-position: 100%;
+        }
+
+        figcaption {
+            position: absolute;
+            bottom: 7%;
+            right: 1.5rem;
+            transform: scale(1, 5) rotateX(85deg) rotateZ(-3deg);
+            font-size: 1.8rem;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(
+                circle at 0% 100%,
+                var(--gradient)
+            );
+            border-radius: 50px;
+            transform: translate(-5%, 15%) scale(1, 5) rotateX(85deg) rotateZ(-3deg);
+            z-index: -1;
+        }
+    }
+</style>
