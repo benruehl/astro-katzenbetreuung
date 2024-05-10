@@ -1,17 +1,24 @@
 ---
 import { Image } from "astro:assets";
 import catImage from "../images/cat-diva.png";
+import IconCard from "./common/IconCard.astro";
 ---
 
 <section>
-    <h2>Vorteile</h2>
+    <h2>Ich biete</h2>
     <h3>Flexible Betreuung</h3>
     <p>
-        Egal, ob Sie nur einen Wochenendtrip oder eine längere Reise
-        unternehmen wollen, zur Kur fahren oder ins Krankenhaus müssen.
-        Gern besuche ich Ihre Katzen und versorge sie umfangreich je nach
+        Gern besuche ich Ihre Katzen und versorge sie je nach
         persönlicher Abstimmung.
     </p>
+    <div class="cards">
+        <IconCard title="Auf Reise" iconName="solar:water-sun-broken">
+            Egal, ob Sie nur einen Wochenendtrip oder einen längeren Urlaub unternehmen wollen.
+        </IconCard>
+        <IconCard title="Bei Notfall" iconName="solar:medical-kit-broken">
+            Wenn Sie zur Kur fahren oder ins Krankenhaus müssen, unterstütze ich Sie gern.
+        </IconCard>
+    </div>
 </section>
 <figure>
     <Image src={catImage} alt="Katze Diva"/>
@@ -63,5 +70,11 @@ import catImage from "../images/cat-diva.png";
             transform: translate(-5%, 15%) scale(1, 5) rotateX(85deg) rotateZ(-3deg);
             z-index: -1;
         }
+    }
+
+    .cards {
+        display: grid;
+        gap: 1rem;
+        margin-bottom: -1rem;
     }
 </style>

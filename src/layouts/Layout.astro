@@ -23,7 +23,8 @@ import '@fontsource-variable/noto-sans';
 		--color-primary: 206, 161, 139;
 		--color-secondary: 146, 57, 106;
 		--color-tertiary: 214, 133, 113;
-		--color-neutral: 229, 225, 216;
+		--color-neutral: 255, 255, 255;
+		--color-background: 243, 240, 235;
 		--gradient: #d68571, #e2ac8d, #edd2b3, #fdf5e2, #eaedef;
 		--content-max-width: 1280px;
     }
@@ -34,6 +35,7 @@ import '@fontsource-variable/noto-sans';
 		scroll-behavior: smooth;
 		font-size: 18px;
 		line-height: 1.5;
+		background: rgb(var(--color-background));
 
 		@media (max-width: $sm) {
 			font-size: 16px;

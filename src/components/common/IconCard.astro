@@ -1,0 +1,46 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Props {
+	iconName: string;
+	title: string;
+}
+
+const { iconName, title } = Astro.props;
+---
+
+<div class="card">
+    <Icon name={iconName} size={40} />
+    <span class="title">{title}</span>
+    <div class="content">
+        <slot/>
+    </div>
+</div>
+
+<style lang="scss">
+    .card {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        gap: .5rem 1rem;
+        padding: 16px;
+        background: rgb(var(--color-neutral));
+        border-radius: 16px;
+    }
+
+    svg {
+        color: rgb(var(--color-secondary));
+        background: rgba(var(--color-secondary), .1);
+        border: 1px solid rgba(var(--color-secondary), .7);
+        border-radius: 8px;
+        padding: 6px;
+    }
+
+    .title {
+        font-size: 1.35rem;
+    }
+
+    .content {
+        grid-column: span 2;
+    }
+</style>

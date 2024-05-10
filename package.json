@@ -13,7 +13,9 @@
     "@astrojs/check": "^0.5.10",
     "@fontsource-variable/comfortaa": "^5.0.20",
     "@fontsource-variable/noto-sans": "^5.0.5",
+    "@iconify-json/solar": "^1.1.9",
     "astro": "^4.7.0",
+    "astro-icon": "^1.1.0",
     "sass": "^1.75.0",
     "typescript": "^5.4.5"
   }
