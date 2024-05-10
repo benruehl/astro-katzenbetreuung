@@ -1,4 +1,5 @@
 <div class="background">
+    <div class="background-pattern"></div>
     <section>
         <h1>Annas<br/>Katzenbetreuung</h1>
         <p class="subtitle">Mobiles Katzensitting in Berlin</p>
@@ -24,7 +25,20 @@
         );
         animation: 1.5s ease-out 0s 1 open;
         transform-origin: 50% 0;
-            clip-path: inset(0 0% round 0 0 30px 30px);
+        clip-path: inset(0 0% round 0 0 30px 30px);
+    }
+
+    .background-pattern {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 70%;
+        height: 60%;
+        background: 
+            radial-gradient(circle at 40% 40%, rgba(255, 255, 255, .15) 25%, transparent 26%),
+            radial-gradient(circle at 60% 60%, rgba(255, 255, 255, .075) 25%, transparent 26%);
+        background-size: 3em 3em;
+        mask-image: radial-gradient(circle at top right, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 70%);
     }
 
     section {
