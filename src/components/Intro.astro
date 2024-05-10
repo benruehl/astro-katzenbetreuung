@@ -36,6 +36,9 @@ import IconCard from "./common/IconCard.astro";
         kennen.
     </p>
 </section>
+<video width="1280" height="720" autoplay muted loop>
+    <source src="cat-background-1.mp4" type="video/mp4">
+</video>
 
 <style lang="scss">
     figure {
@@ -76,5 +79,15 @@ import IconCard from "./common/IconCard.astro";
         display: grid;
         gap: 1rem;
         margin-bottom: -1rem;
+    }
+
+    video {
+        display: block;
+        width: 100%;
+        height: auto;
+        min-width: 600px;
+        max-width: var(--content-max-width);
+        mix-blend-mode: multiply;
+        mask-image: linear-gradient(to top, black 80%, transparent);
     }
 </style>
