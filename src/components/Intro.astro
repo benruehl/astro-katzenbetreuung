@@ -2,6 +2,8 @@
 import { Image } from "astro:assets";
 import catImage from "../images/cat-diva.png";
 import IconCard from "./common/IconCard.astro";
+
+const baseUrl = import.meta.env.BASE_URL;
 ---
 
 <section>
@@ -37,7 +39,7 @@ import IconCard from "./common/IconCard.astro";
     </p>
 </section>
 <video width="1280" height="720" autoplay muted loop>
-    <source src="cat-background-1.mp4" type="video/mp4">
+    <source src=`${baseUrl}/cat-background-1.mp4` type="video/mp4">
 </video>
 
 <style lang="scss">
